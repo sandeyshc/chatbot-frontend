@@ -12,7 +12,7 @@ const Chatbot = () => {
       setMessages([...messages, userMessage]);
 
       try {
-        const response = await axios.post('http://127.0.0.1:8000/ask', {
+        const response = await axios.post('https://chatbot-backend-alltius.netlify.app/ask', {
           query: input
         });
         // console.log(response)
@@ -31,7 +31,7 @@ const Chatbot = () => {
       handleSend();
     }
   };
-  
+
   return (
     <div className="chatbot-container">
       <div className="chatbot-header">
